@@ -20,6 +20,9 @@ class Post(models.Model):
                               blank=True,
                               verbose_name="post's group", null=True)
 
+    class Meta:
+        ordering = ['-pub_date']
+
 
 class Group(models.Model):
     Options.verbose_name = "group"
