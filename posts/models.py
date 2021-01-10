@@ -18,8 +18,8 @@ class Post(models.Model):
 
     class Meta:
         ordering = ['-pub_date']
-        verbose_name = "post"
-        verbose_name_plural = "posts"
+        verbose_name = "Пост"
+        verbose_name_plural = "Посты"
 
 
 class Group(models.Model):
@@ -28,8 +28,8 @@ class Group(models.Model):
     description = models.TextField("Описание группы")
 
     class Meta:
-        verbose_name = "group"
-        verbose_name_plural = "groups"
+        verbose_name = "Группа"
+        verbose_name_plural = "Группы"
 
     def __str__(self):
         return self.title
