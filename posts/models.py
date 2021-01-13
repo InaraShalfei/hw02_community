@@ -21,6 +21,8 @@ class Post(models.Model):
         verbose_name = "Пост"
         verbose_name_plural = "Посты"
 
+    def __str__(self):
+        return self.text
 
 class Group(models.Model):
     title = models.CharField("Название группы", max_length=200)
