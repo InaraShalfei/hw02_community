@@ -2,6 +2,8 @@ from django.shortcuts import render, get_object_or_404
 
 from .models import Post, Group
 
+import datetime as dt
+
 
 def index(request):
     latest = Post.objects.all()[:11]
@@ -12,5 +14,11 @@ def group_posts(request, slug):
     group = get_object_or_404(Group, slug=slug)
     posts = group.posts.all()[:11]
     return render(request, "group.html", {"group": group, "posts": posts})
+
+
+
+
+
+
 
 
